@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import useContexHooks from "./useContexHooks";
 
 const axiosSecure = axios.create({
-  baseURL: "https://backendlms-nine.vercel.app",
+  baseURL: import.meta.env.VITE_API_URL || "https://studious-engine-eight.vercel.app/",
 });
 const useAxiosSecure = () => {
   const navigate = useNavigate();
